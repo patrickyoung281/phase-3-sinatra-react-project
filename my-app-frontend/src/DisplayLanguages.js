@@ -16,6 +16,8 @@ const button2 = <button onClick={onAddADialect}>Click here to add a dialect!</bu
 const params=useParams();
 console.log("params", params)
 
+const paramsID = displayLanguages[params.languageId]-1
+
 function onEditThisLanguage () {
   setEditThisLanguage(current => !current)
 }
@@ -24,34 +26,26 @@ function onAddADialect () {
   setAddADialect(current => !current)
 }
 
-const showLanguages = displayLanguages.map((entry)=>{
-    return <div>
-    <h1 key={entry.id}>
-    {entry.language} <br></br>
-    Number of Speakers:{" "} {entry.number_of_speakers} <br></br>
-    Dialects: 
-      {entry.dialects.map((entry)=>{
-      return <ul><li>{entry.dialect_name}</li></ul>
-
-    })
-  }
-  </h1>
-    <div>{button2}</div>
-    <div>{addADialect ? <AddDialect id={entry.id} languageName={entry.language} setDisplayLanguages={setDisplayLanguages} displayLanguages={displayLanguages} setAddADialect={setAddADialect}/> : null }</div>
-    <div>{button1}</div>
-    <div>{editThisLanguage ? <EditLanguage id={entry.id} setDisplayLanguages={setDisplayLanguages} displayLanguages={displayLanguages} setEditThisLanguage={setEditThisLanguage}/> : null }</div>
-    <div><DeleteLanguage id={entry.id} displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages}/></div>
-    <hr></hr>
-    </div>
-  })
-
   return (
-
     <div>
-      {showLanguages}
+      <div>
+        <h1>{displayLanguages[params.languagesId].language}</h1>
+        <br></br>
+        <h2>{displayLanguages[params.languagesId].number_of_speakers}</h2>
+        <h3>{displayLanguages[params.languagesId].dialects.map((entry)=>{
+          return <h3>{entry.dialect_name}</h3>
+        })}</h3>
+      </div>
+      <div>
+        <div>{button2}</div>
+        <div>{addADialect ? <AddDialect id={paramsID} languageName={paramsID.language} setDisplayLanguages={setDisplayLanguages} displayLanguages={displayLanguages} setAddADialect={setAddADialect}/> : null }</div>
+        <div>{button1}</div>
+        <div>{editThisLanguage ? <EditLanguage id={paramsID} setDisplayLanguages={setDisplayLanguages} displayLanguages={displayLanguages} setEditThisLanguage={setEditThisLanguage}/> : null }</div>
+        <div><DeleteLanguage id={paramsID} displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages}/></div>
+        <hr></hr>
+      </div>
       <AddLanguage setDisplayLanguages={setDisplayLanguages}/>
     </div>
-
   )
 }
 

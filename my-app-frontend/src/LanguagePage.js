@@ -10,7 +10,6 @@ function LanguagePage ( {displayLanguages, setDisplayLanguages} ) {
 
     return (<div>
         <LanguageList displayLanguages={displayLanguages}/>
-        {/* <DisplayLanguages displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages} /> */}
         <Route path={`${match.url}/:languagesId`}>
             <DisplayLanguages displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages} />
         </Route>
