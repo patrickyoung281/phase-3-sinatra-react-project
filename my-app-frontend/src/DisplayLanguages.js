@@ -3,7 +3,7 @@ import AddLanguage from "./AddLanguage";
 import DeleteLanguage from "./DeleteLanguage";
 import EditLanguage from "./EditLanguage";
 import AddDialect from "./AddDialect";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function DisplayLanguages ( {displayLanguages, setDisplayLanguages} ) {
 
@@ -26,9 +26,6 @@ function onAddADialect () {
 
 const showLanguages = displayLanguages.map((entry)=>{
     return <div>
-    <li key={entry.id}>
-      <Link to={`/languages/${entry.id}`}>{entry.language}</Link>
-    </li>
     <h1 key={entry.id}>
     {entry.language} <br></br>
     Number of Speakers:{" "} {entry.number_of_speakers} <br></br>

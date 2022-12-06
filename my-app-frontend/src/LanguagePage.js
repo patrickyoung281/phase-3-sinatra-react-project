@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 import DisplayLanguages from "./DisplayLanguages";
+import LanguageList from "./LanguageList";
 
 function LanguagePage ( {displayLanguages, setDisplayLanguages} ) {
 
@@ -8,9 +9,10 @@ function LanguagePage ( {displayLanguages, setDisplayLanguages} ) {
     console.log("match", match);
 
     return (<div>
-        <DisplayLanguages displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages} />
+        <LanguageList displayLanguages={displayLanguages}/>
+        {/* <DisplayLanguages displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages} /> */}
         <Route path={`${match.url}/:languagesId`}>
-            <DisplayLanguages />
+            <DisplayLanguages displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages} />
         </Route>
     </div>
 )}
