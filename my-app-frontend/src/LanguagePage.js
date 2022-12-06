@@ -6,7 +6,6 @@ import LanguageList from "./LanguageList";
 function LanguagePage ( {displayLanguages, setDisplayLanguages} ) {
 
     const match = useRouteMatch();
-    console.log("match", match);
 
     return (<div>
         <LanguageList displayLanguages={displayLanguages}/>
