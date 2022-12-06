@@ -18,21 +18,6 @@ console.log("params", displayLanguages[params.languagesId-1].language)
 
 const selectedLanguage = displayLanguages[params.languagesId-1]
 
-// const [selectedLanguage, setSelectedLanguage] = useState("")
-
-// useEffect(()=>{
-//   const languageID= displayLanguages.find((entry)=>{
-//     return entry.id==params.languagesId
-// })
-// setSelectedLanguage(languageID)
-// },[params])
-
-
-// console.log("selectedLanguage", [selectedLanguage.dialects]);
-
-// // console.log ("language ID", languageID)
-
-
 function onEditThisLanguage () {
   setEditThisLanguage(current => !current)
 }
