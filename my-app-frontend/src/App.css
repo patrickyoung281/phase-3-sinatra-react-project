@@ -40,3 +40,9 @@
 .navBar {
   text-align: center;
 }
+
+#homeImage{
+  position: relative;
+  top: -400px;
+  z-index: -5;
+}
