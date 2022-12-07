@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AddLanguage from "./AddLanguage";
 import DeleteLanguage from "./DeleteLanguage";
 import EditLanguage from "./EditLanguage";
@@ -56,7 +56,7 @@ const displayDialects = correctLanguage.dialects.map((entry)=>{
         <div><DeleteLanguage id={correctLanguage.id} displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages}/></div>
         <hr></hr>
       </div>
-      <AddLanguage setDisplayLanguages={setDisplayLanguages}/>
+      {/* <AddLanguage setDisplayLanguages={setDisplayLanguages}/> */}
     </div>
   )
 }
