@@ -4,11 +4,9 @@ import { useHistory } from "react-router-dom";
 function DeleteLanguage ( { displayLanguages, setDisplayLanguages, id} ) {
     
   const history = useHistory();
-  console.log("history", history);
   const redirect = () => {
     history.push('/languages/')
   }
-  console.log(redirect)
 
     function handleDeleteClick(id) {
         fetch(`http://localhost:9292/languages/${id}`, {
