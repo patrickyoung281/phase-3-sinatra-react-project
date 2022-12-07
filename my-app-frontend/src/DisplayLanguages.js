@@ -11,17 +11,6 @@ const params=useParams();
 const [editThisLanguage, setEditThisLanguage] = useState(false)
 const [addADialect, setAddADialect] = useState(false)
 
-
-
-
-// const [selectedLanguage1, setSelectedLanguage] = useState(params)
-
-// useEffect(()=>{
-//   setSelectedLanguage(params)
-// },[params])  
-
-// console.log(selectedLanguage1)
-
 function onEditThisLanguage () {
   setEditThisLanguage(current => !current)
 }
@@ -35,7 +24,7 @@ const correctLanguage = displayLanguages.find((entry)=>{
 })
 
 const displayDialects = correctLanguage.dialects.map((entry)=>{
-  return entry.dialect_name
+  return <li>{entry.dialect_name}</li>
 })
 const button1 = <button onClick={onEditThisLanguage}>Click Here to Edit this Language</button>
 const button2 = <button onClick={onAddADialect}>Click here to add a {correctLanguage.language} dialect!</button>
@@ -45,6 +34,7 @@ const button2 = <button onClick={onAddADialect}>Click here to add a {correctLang
         <h1>{correctLanguage.language}</h1>
         <br></br>
         <h2>{correctLanguage.number_of_speakers}</h2>
+        <h2>{correctLanguage.language} Dialects</h2>
         <h3>{displayDialects}</h3>
       </div>
       <div>
@@ -55,7 +45,6 @@ const button2 = <button onClick={onAddADialect}>Click here to add a {correctLang
         <div><DeleteLanguage id={correctLanguage.id} displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages}/></div>
         <hr></hr>
       </div>
-      {/* <AddLanguage setDisplayLanguages={setDisplayLanguages}/> */}
     </div>
   )
 }
