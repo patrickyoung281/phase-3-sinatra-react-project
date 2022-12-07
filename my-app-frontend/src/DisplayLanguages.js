@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AddLanguage from "./AddLanguage";
 import DeleteLanguage from "./DeleteLanguage";
 import EditLanguage from "./EditLanguage";
 import AddDialect from "./AddDialect";
@@ -13,8 +12,7 @@ const [editThisLanguage, setEditThisLanguage] = useState(false)
 const [addADialect, setAddADialect] = useState(false)
 
 
-const button1 = <button onClick={onEditThisLanguage}>Click Here to Edit this Language</button>
-const button2 = <button onClick={onAddADialect}>Click here to add a dialect!</button>
+
 
 // const [selectedLanguage1, setSelectedLanguage] = useState(params)
 
@@ -39,7 +37,8 @@ const correctLanguage = displayLanguages.find((entry)=>{
 const displayDialects = correctLanguage.dialects.map((entry)=>{
   return entry.dialect_name
 })
-
+const button1 = <button onClick={onEditThisLanguage}>Click Here to Edit this Language</button>
+const button2 = <button onClick={onAddADialect}>Click here to add a {correctLanguage.language} dialect!</button>
   return (
     <div>
       <div>
