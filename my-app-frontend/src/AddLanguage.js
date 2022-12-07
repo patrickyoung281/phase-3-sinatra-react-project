@@ -13,7 +13,7 @@ function AddLanguage ( {setDisplayLanguages} ) {
         
         setFormData({
             ...formData,
-            [name]: value,
+            [name]: value
         });
       }
       
@@ -61,6 +61,7 @@ return (
                 placeholder="Number of Speakers">
                 </input>
             </label>
+
             <div>
                 <div>
                 <br></br>

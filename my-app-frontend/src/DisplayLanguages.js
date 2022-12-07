@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import AddLanguage from "./AddLanguage";
 import DeleteLanguage from "./DeleteLanguage";
 import EditLanguage from "./EditLanguage";
@@ -7,14 +7,14 @@ import { useParams } from "react-router-dom";
 
 function DisplayLanguages ( {displayLanguages, setDisplayLanguages} ) {
 
+const params=useParams();
+
 const [editThisLanguage, setEditThisLanguage] = useState(false)
 const [addADialect, setAddADialect] = useState(false)
 
+
 const button1 = <button onClick={onEditThisLanguage}>Click Here to Edit this Language</button>
 const button2 = <button onClick={onAddADialect}>Click here to add a dialect!</button>
-
-const params=useParams();
-console.log("params", displayLanguages[params.languagesId-1].language)
 
 const selectedLanguage = displayLanguages[params.languagesId-1]
 
