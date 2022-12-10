@@ -1,6 +1,12 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 function AddLanguage ( {setDisplayLanguages} ) {
+
+    const history = useHistory();
+    const redirect = (id) => {
+        history.push(`/languages/${id}`)
+    }
 
     const [formData, setFormData] = useState({
         language: "",
@@ -28,12 +34,22 @@ function AddLanguage ( {setDisplayLanguages} ) {
         body: JSON.stringify(formData),
         })
         .then((resp)=>resp.json())
-        .then((data)=>setDisplayLanguages(data));
-
+        .then((data)=>{
+            
+            const ids = data.map((entry)=>{
+                return entry.id
+            })
+            const max = Math.max.apply(null, ids);
+            redirect(max)
+            setDisplayLanguages(data)}
+            )
+            
         setFormData({
             language: "",
             number_of_speakers: ""
         })
+        
+        
       }
 
 return (
