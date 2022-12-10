@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 function LanguageList ( {displayLanguages} ) {
 
     const renderLanguages = displayLanguages.map((entry)=>{
-    return <li key={entry.id}>
-      <Link to={`/languages/${entry.id}`}>{entry.language}</Link>
-    </li>
+    return <h2 key={entry.id}>
+        <Link to={`/languages/${entry.id}`}>{entry.language}</Link>
+    </h2>
     })
 
     return (

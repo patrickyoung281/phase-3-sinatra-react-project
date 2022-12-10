@@ -6,12 +6,13 @@ class ApplicationController < Sinatra::Base
   get "/languages" do
     languages = Language.all
     languages.to_json(include: :dialects)
+    
   end
 
-  get "/languages/:id" do
-    language = Language.find(params[:id])
-    language.to_json(include: :dialects)
-  end
+  # get "/languages/:id" do
+  #   language = Language.find(params[:id])
+  #   language.to_json(include: :dialects)
+  # end
 
   post "/languages" do
     language = Language.create(params)
@@ -30,25 +31,25 @@ class ApplicationController < Sinatra::Base
     language.to_json
   end
 
-  get "/dialects" do
-    dialects = Dialect.all
-    dialects.to_json
-  end
+  # get "/dialects" do - include this route via extra fetch request 
+  #   dialects = Dialect.all
+  #   dialects.to_json
+  # end
 
   post "/dialects" do
     dialect = Dialect.create(params)
     dialect.to_json
   end
 
-  patch "/dialects/:id" do
-    dialect = Dialect.find(params[:id])
-    dialect.update(params)
-    dialect.to_json
-  end
+  # patch "/dialects/:id" do
+  #   dialect = Dialect.find(params[:id])
+  #   dialect.update(params)
+  #   dialect.to_json
+  # end
 
-  delete "/dialects/:id" do
-    dialect = Dialect.find(params[:id])
-    dialect.destroy
-  end
+  # delete "/dialects/:id" do
+  #   dialect = Dialect.find(params[:id])
+  #   dialect.destroy
+  # end
 
 end

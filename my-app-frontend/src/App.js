@@ -27,6 +27,7 @@ function App() {
         <LanguagePage displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages} />
       </Route>
       
+      
   </div>
   
   );

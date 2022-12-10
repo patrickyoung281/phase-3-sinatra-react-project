@@ -30,7 +30,6 @@ function AddLanguage ( {setDisplayLanguages} ) {
         .then((resp)=>resp.json())
         .then((data)=>setDisplayLanguages(data));
 
-      
         setFormData({
             language: "",
             number_of_speakers: ""
