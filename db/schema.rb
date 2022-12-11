@@ -10,20 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_15_201005) do
+ActiveRecord::Schema.define(version: 2022_12_11_205011) do
 
   create_table "dialects", force: :cascade do |t|
     t.string "dialect_name"
     t.integer "number_of_speakers"
-    t.boolean "endangered?"
     t.integer "language_id"
   end
 
   create_table "languages", force: :cascade do |t|
     t.string "language"
     t.integer "number_of_speakers"
-    t.string "language_family"
-    t.boolean "endangered?"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
