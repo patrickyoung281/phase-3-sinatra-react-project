@@ -7,8 +7,6 @@ def self.all_languages
     language.map {|language| language.language}
 end
 
-
-
 def self.create_with_attributes(language, number_of_speakers)
     Language.new(language: language,
                 number_of_speakers: number_of_speakers

@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_11_205011) do
+ActiveRecord::Schema.define(version: 2022_12_13_022814) do
 
   create_table "dialects", force: :cascade do |t|
     t.string "dialect_name"
-    t.integer "number_of_speakers"
     t.integer "language_id"
   end
 
