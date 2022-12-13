@@ -18,6 +18,11 @@ def self.most_speakers
     language.language_family
 end
 
+def self.find_id_by_name(language)
+    language = Language.find(language==language)
+    language.id
+end
+
 def self.first_language
     language=Language.all
     language.first
