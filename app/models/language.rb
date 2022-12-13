@@ -46,4 +46,14 @@ def self.alpha_order
     Language.order(language: :asc)
 end
 
+def self.delete_by_id(id)
+    language=Language.find(id==id)
+    language.destroy
+end
+
+def self.delete_all_languages
+    Language.destroy_all
+end
+
+
 end

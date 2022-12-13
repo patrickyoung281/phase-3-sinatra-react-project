@@ -19,6 +19,13 @@ def self.dialects_alphabetically
     Dialect.order(dialect_name: :asc)
 end
 
+def self.delete_by_id(id)
+    dialect=Dialect.find(id==id)
+    dialect.destroy
+end
 
+def self.delete_all_dialects
+    Dialect.destroy_all
+end
 
 end
