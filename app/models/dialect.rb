@@ -5,7 +5,7 @@ class Dialect < ActiveRecord::Base
     attr_accessor :dialect_name
 
 def self.create_with_attributes(dialect_name, language_id)
-    Dialect.new(dialect_name: dialect_name,
+    Dialect.create(dialect_name: dialect_name,
                 language_id: language_id
     )
 end
