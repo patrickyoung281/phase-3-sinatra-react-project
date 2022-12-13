@@ -2,7 +2,6 @@ class Language < ActiveRecord::Base
    
     has_many :dialects
 
-
 def self.all_languages
     language=Language.all
     language.map {|language| language.language}
