@@ -18,32 +18,26 @@ $language_data = [
 $dialect_data = [
     {
         dialect_name: "Bavarian",
-        number_of_speakers: 12000000,
         language_id: 1,
     },
     {
         dialect_name: "Kölsch",
-        number_of_speakers: 500000,
         language_id: 1,
     },
     {
         dialect_name: "Louisiana French",
-        number_of_speakers: 200000,
         language_id: 2,
     },
     {
         dialect_name: "Quebec French",
-        number_of_speakers: 7000000,
         language_id: 2,
     },
     {
         dialect_name: "Scottish",
-        number_of_speakers: 4000000,
         language_id: 3,
     },
     {
         dialect_name: "Pennsylvania Dutch English",
-        number_of_speakers: 300000,
         language_id: 3,
     },
 

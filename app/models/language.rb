@@ -20,8 +20,8 @@ def self.total_speakers
 end
 
 def self.most_speakers
-    language = Language.where("number_of_speakers=?", self.highest_number_of_speakers)[0]
-    language.language_family
+    language = Language.where("number_of_speakers=?", self.maximum(:number_of_speakers))[0]
+    language.language
 end
 
 def self.find_id_by_name(name)
@@ -45,7 +45,7 @@ def self.find_by_id(id)
 end
 
 def self.delete_by_id(id)
-    language=Language.find(id==id)
+    language=Language.find(id===id)
     language.delete
 end
 
