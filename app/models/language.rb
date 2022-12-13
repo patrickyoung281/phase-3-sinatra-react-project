@@ -7,6 +7,14 @@ def self.all_languages
     language.map {|language| language.language}
 end
 
+
+
+def self.create_with_attributes(language, number_of_speakers)
+    Language.new(language: language,
+                number_of_speakers: number_of_speakers
+    )
+end
+
 def self.total_speakers
     all=Language.all
     all1 = all.map {|entry| entry.number_of_speakers}
@@ -18,9 +26,9 @@ def self.most_speakers
     language.language_family
 end
 
-def self.find_id_by_name(language)
-    language = Language.find(language==language)
-    language.id
+def self.find_id_by_name(name)
+    target = Language.find{|language|language.language===name}
+    target.id
 end
 
 def self.first_language
@@ -34,7 +42,8 @@ def self.last_language
 end
 
 def self.find_by_id(id)
-    Language.find(id==id)
+    language = Language.find {|language|language.id==id}
+    language
 end
 
 def self.delete_by_id(id)
@@ -54,6 +63,5 @@ end
 def self.delete_all_languages
     Language.destroy_all
 end
-
 
 end
