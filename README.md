@@ -6,10 +6,14 @@ This database keeps an updated record of languages and their dialects, as well a
 
 The back-end server and the front-end react code are all contained within a single repository. Once you create a fork and open the repository in your terminal, you will first need to start the server, and then start the front-end. 
 
+<h4><strong>Starting the back end server</strong></h4>
+
 To start the server, in your terminal, change into the "app" folder. Once you do this, run the command "bundle exec rake server". This will start running the back-end server.  
 
 ~/phase-3-sinatra-react-project$ cd app
 ~phase-3-sinatra-react-project/app$ bundle exec rake server
+
+<h4><strong>Starting the front end browser</strong></h4>
 
 After you start the server, open a new terminal, and cd into the front-end of the repository by changing into the "my-app-frontend" folder. Once you do this, run the command "install", followed by "npm start". The first command will install the necessary gems, and the second command will open a new tab in your browser. Now you are ready to start using the site! 
 
@@ -17,7 +21,7 @@ After you start the server, open a new terminal, and cd into the front-end of th
 ~phase-3-sinatra-react-project/my-app-front-end$ bundle install
 ~phase-3-sinatra-react-project/my-app-front-end$ npm start
 
-<strong>Optional:</strong><h4> The repository has a seed data file which contains three default languages and their associated dialects. If you would like to start the site with these default languages already on the page, open a new terminal, cd into the app file, and run the command rake db:seed. 
+<h4><strong>Optional:</strong></h4> <h4> The repository has a seed data file which contains three default languages and their associated dialects. If you would like to start the site with these default languages already on the page, open a new terminal, cd into the app file, and run the command rake db:seed. 
 
 ~phase-3-sinatra-react-project/app$ rake db:seed</h4>
 
