@@ -12,4 +12,4 @@ If you need to edit the name of a language, select a language, and the click the
 
 Below is a roadmap of the React components. 
 
-<img src="src/images/ComponentHierarchy.jpg">
+<img src="my-app-frontend/src/images/ComponentHierarchy.jpg">
