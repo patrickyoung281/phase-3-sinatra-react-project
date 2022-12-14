@@ -23,9 +23,9 @@ After you start the server, open a new terminal, and cd into the front-end of th
 
 <h4><strong>Optional Default Data:</strong></h4> 
 
-<h4>The repository has a seed data file which contains three default languages and their associated dialects. If you would like to start the site with these default languages already on the page, open a new terminal, cd into the app file, and run the command rake db:seed.</h4> 
+The repository has a seed data file which contains three default languages and their associated dialects. If you would like to start the site with these default languages already on the page, open a new terminal, cd into the app file, and run the command rake db:seed.
 
-<h4>~phase-3-sinatra-react-project/app$ rake db:seed</h4>
+~phase-3-sinatra-react-project/app$ rake db:seed
 
 <h3><strong>Create A Language</strong></h3>
 
@@ -38,3 +38,7 @@ If you need to edit the name of a language, select a language, and the click the
 Below is a roadmap of the React components. 
 
 <img src="my-app-frontend/src/images/ComponentHierarchy.jpg">
+
+<h4>Future Goals</h4>
+
+The next step for this app would be to allow users to add dialects at the same time they add a language. This would reduce the number of steps a use needs to take to create a new language entry. I would also like to add a drop-down filter, so that when the list of languages gets very large, all of them can be easily seen and accessed. 
