@@ -4,7 +4,6 @@ import './App.css';
 import NavBar from "./NavBar";
 import { Route } from "react-router-dom";
 import Home from "./Home";
-
 import LanguagePage from "./LanguagePage";
 
 function App() {
@@ -26,10 +25,7 @@ function App() {
       <Route path="/languages">
         <LanguagePage displayLanguages={displayLanguages} setDisplayLanguages={setDisplayLanguages} />
       </Route>
-      
-      
   </div>
-  
   );
 }
 

@@ -49,7 +49,6 @@ function AddLanguage ( {setDisplayLanguages} ) {
             number_of_speakers: ""
         })
         
-        
       }
 
 return (
