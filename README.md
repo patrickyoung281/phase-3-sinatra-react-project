@@ -23,9 +23,9 @@ After you start the server, open a new terminal, and cd into the front-end of th
 
 <h4><strong>Optional Default Data:</strong></h4> 
 
-<h4>The repository has a seed data file which contains three default languages and their associated dialects. If you would like to start the site with these default languages already on the page, open a new terminal, cd into the app file, and run the command rake db:seed. 
+<h4>The repository has a seed data file which contains three default languages and their associated dialects. If you would like to start the site with these default languages already on the page, open a new terminal, cd into the app file, and run the command rake db:seed.</h4> 
 
-~phase-3-sinatra-react-project/app$ rake db:seed</h4>
+<h4>~phase-3-sinatra-react-project/app$ rake db:seed</h4>
 
 <h3><strong>Create A Language</strong></h3>
 
