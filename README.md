@@ -21,7 +21,9 @@ After you start the server, open a new terminal, and cd into the front-end of th
 ~phase-3-sinatra-react-project/my-app-front-end$ bundle install
 ~phase-3-sinatra-react-project/my-app-front-end$ npm start
 
-<h4><strong>Optional:</strong></h4> <h4> The repository has a seed data file which contains three default languages and their associated dialects. If you would like to start the site with these default languages already on the page, open a new terminal, cd into the app file, and run the command rake db:seed. 
+<h4><strong>Optional Default Data:</strong></h4> 
+
+<h4>The repository has a seed data file which contains three default languages and their associated dialects. If you would like to start the site with these default languages already on the page, open a new terminal, cd into the app file, and run the command rake db:seed. 
 
 ~phase-3-sinatra-react-project/app$ rake db:seed</h4>
 
