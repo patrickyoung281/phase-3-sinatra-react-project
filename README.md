@@ -8,17 +8,20 @@ The back-end server and the front-end react code are all contained within a sing
 
 <h4><strong>Starting the back end server</strong></h4>
 
-To start the server, in your terminal, change into the "app" folder. Once you do this, run the command "bundle exec rake server". This will start running the back-end server.  
+To start the server, in your terminal, change into the "app" folder. Once you do this, first install the necessary Ruby gems with the command "bundle install." Then to set up the database, run the migrations in the db/migrate folder with the command "bundle exec rake db:migrate." At this point, the database will not contain any data - see the note below about populating the database with optional default data. Then, run the command "bundle exec rake server". This will start running the back-end server.  
 
 ~/phase-3-sinatra-react-project$ cd app
+~phase-3-sinatra-react-project/app$ bundle install 
+~phase-3-sinatra-react-project/app$ bundle exec rake db: migrate
+(optional! See note below) ~phase-3-sinatra-react-project/app$ bundle exec rake db:seed
 ~phase-3-sinatra-react-project/app$ bundle exec rake server
 
 <h4><strong>Starting the front end browser</strong></h4>
 
-After you start the server, open a new terminal, and cd into the front-end of the repository by changing into the "my-app-frontend" folder. Once you do this, run the command "install", followed by "npm start". The first command will install the necessary gems, and the second command will open a new tab in your browser. Now you are ready to start using the site! 
+After you start the server, open a new terminal, and cd into the front-end of the repository by changing into the "my-app-frontend" folder. Once you do this, run the command "npm install", followed by "npm start". The first command will install the necessary Javascript packages, and the second command will open a new tab in your browser. Now you are ready to start using the site! 
 
 ~phase-3-sinatra-react-project$ cd my-app-frontend
-~phase-3-sinatra-react-project/my-app-front-end$ bundle install
+~phase-3-sinatra-react-project/my-app-front-end$ npm install
 ~phase-3-sinatra-react-project/my-app-front-end$ npm start
 
 <h4><strong>Optional Default Data:</strong></h4> 
